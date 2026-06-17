@@ -69,7 +69,7 @@ app.post("/pets", (req, res) => {
   const newPet = { id, name, breed, age, adopted };
   pets.push(newPet);
 
-  res.status(201).send("Pet created successfully");
+  res.status(201).json(newPet);
 });
 
 // PUT /pets/:id — update an existing pet
