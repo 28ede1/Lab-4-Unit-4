@@ -106,7 +106,22 @@ app.delete("/pets/:id", (req, res) => {
   res.status(200).json({ message: `Pet with id ${id} deleted.` });
 });
 
+// No particular specific URL given...when the user opens the API
+// they will recieve a message.
+app.get('/', (req, res) => {
+    res.send('Welcome to the Adopt-a-Pet API!')
+  })
+
+app.get('/hello-world', (req, res) => {
+    res.send("Hello, World!")
+})
+
+app.get('/hello-pet', (req, res) => {
+    res.send("Hello, Pet!")
+})
+
 // Start the server
 app.listen(PORT, () => {
   console.log(`Pets API listening on http://localhost:${PORT}`);
 });
+

@@ -67,3 +67,13 @@ Success - 200 OK - returns a confirmation message:
 Error - 404 Not Found error:
 { "error": "Pet with id 99 not found." }
 ------------------------------------------------------
+
+Implement and test these two routes:
+
+app.get('/hello-world', (req, res) => {
+    res.send("Hello, World!")
+})
+
+app.get('/hello-pet', (req, res) => {
+    res.send("Hello, Pet!")
+})
